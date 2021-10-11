@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<title>AJAX Data Retrieve</title>
+    
+</head>
+
+<body>
+	<div class="container">
+        <div class="content">
+            <div class="text-right mt-2">
+                <button id="theme" class="btn btn-sm btn-light">Change Theme</button>
+            </div>
+            <h3 class="mt-4">Hide, Show</h3>
+            <p id="article1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt beatae laboriosam labore tempore sit. Quos nesciunt facilis, accusamus, repellendus cum quam, perspiciatis in aperiam deleniti est optio. Iste nam ad optio quisquam ab autem omnis consequuntur maiores quidem maxime dolorum eaque eum similique iure rerum doloribus, vel natus commodi quae?</p>
+            <button id="hide" class="btn btn-sm btn-primary">Hide</button>
+            <button id="show" class="btn btn-sm btn-primary">Show</button>
+            <button id="toggle" class="btn btn-sm btn-primary">Toggle</button>
+    
+            <h3 class="mt-4">Fade out, Fade in</h3>
+            <p id="article2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt beatae laboriosam labore tempore sit. Quos nesciunt facilis, accusamus, repellendus cum quam, perspiciatis in aperiam deleniti est optio. Iste nam ad optio quisquam ab autem omnis consequuntur maiores quidem maxime dolorum eaque eum similique iure rerum doloribus, vel natus commodi quae?</p>
+            <button id="fade-out" class="btn btn-sm btn-primary">Fade out</button>
+            <button id="fade-in" class="btn btn-sm btn-primary">Fade in</button>
+            <button id="fade-toggle" class="btn btn-sm btn-primary">Fade toggle</button>
+    
+            <h3 class="mt-4">Slide down, Slide up</h3>
+            <p id="article3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt beatae laboriosam labore tempore sit. Quos nesciunt facilis, accusamus, repellendus cum quam, perspiciatis in aperiam deleniti est optio. Iste nam ad optio quisquam ab autem omnis consequuntur maiores quidem maxime dolorum eaque eum similique iure rerum doloribus, vel natus commodi quae?</p>
+            <button id="slide-up" class="btn btn-sm btn-primary">Slide up</button>
+            <button id="slide-down" class="btn btn-sm btn-primary">Slide down</button>
+            <button id="slide-toggle" class="btn btn-sm btn-primary">Slide Toggle</button>
+        </div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+		integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+		crossorigin="anonymous"></script>
+
+	<!-- Custom Script -->
+	<script>
+		$(document).ready(function() {
+            $('#hide').click(function() {
+                $('#article1').hide('fast');
+            });
+            $('#show').click(function() {
+                $('#article1').show('fast');
+            });
+            $('#toggle').click(function() {
+                $('#article1').toggle('fast');
+            });
+            $('#fade-out').click(function() {
+                $('#article2').fadeOut('slow');
+            });
+            $('#fade-in').click(function() {
+                $('#article2').fadeIn('slow');
+            });
+            $('#fade-toggle').click(function() {
+                $('#article2').fadeToggle('slow');
+            });
+            $('#slide-up').click(function() {
+                $('#article3').slideUp('slow');
+            });
+            $('#slide-down').click(function() {
+                $('#article3').slideDown('slow');
+            });
+            $('#slide-toggle').click(function() {
+                $('#article3').slideToggle('slow');
+            });
+
+
+            $('button#theme').click(function(){
+                $(this).toggleClass('btn-secondary');
+                $('body').toggleClass('bg-dark');
+                $('h3, p').toggleClass('text-light');
+                $('button').toggleClass("btn-info");
+            });
+
+		});
+	</script>
+</body>
+
+</html>
